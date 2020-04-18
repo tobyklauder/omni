@@ -5,13 +5,24 @@ using UnityEngine;
 public class playercontroller : MonoBehaviour
 {
     // Start is called before the first frame update
-    Rigidbody2D myrb; 
+    Rigidbody2D myrb;
+    public bool caninteract;
+    public GameObject robot; 
     void Start()
     {
         myrb = GetComponent<Rigidbody2D>(); 
     }
     private void Update()
     {
+        if (Vector3.Distance(this.transform.position, robot.transform.position) < 5 && robotAI.anydetecteduni) {
+            caninteract = true; 
+        }
+        if (caninteract) {
+            if (Input.GetKeyDown(KeyCode.Q)) {
+                Debug.Log("Interact Successful"); 
+                robotAI.pursuepassive = true; 
+            }
+        }
         myrb.velocity = Vector2.zero; 
     }
     // Update is called once per frame

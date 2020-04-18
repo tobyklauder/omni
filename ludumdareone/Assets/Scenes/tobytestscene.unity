@@ -717,7 +717,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12.285906
+  orthographic size: 14.49
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -741,7 +741,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1052,7 +1052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACAn+squB7nYgIAAAUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty2jAU/RVG65KxXYKhu9YhpIs8JqSTjTfCusYaZMmjR4Bk+PdeyTZ26Qpx7kPnnHvlL8KlaaCwSq81Z4+KAfkxIf5Mvk2G4AMc6U7JDf+EPuedM1v5JBpyXqnlCvHYlxlVg9W8+Cl3widHCDrJS6XrFdtBpow1CJdUGMCQVtZXS4S+JuSIP9OlLznhKUn96RNPy2hyxmMB0oIeUuPFzfw2jaNk3lVEN3EULWaLZVfXljlZCFo3wLyGoTpN+nsWIU2iui7DKymUENx01Ig9NUF6RhvjUBgmME5RauAT3/heFfBdZX3DcflzWRqwnROanu64Rs/avuSXao2sqdm3zD6ocP6m5HYeWLVNH/+LT+MQLrWqH/p7UTxCtuLF/pWeCmrsyOkxfDeiHgw6ULGnWwHvFcgntdbKSYZBq50vdQaSu+HvRVpWQbEf8JbqFeiawfF+sP1YvYZzUH/MBK+3YYKzFtgIFRwP2wAaZ/MbCYddMV0LRD2LPwbe6G68VF3gnmtjMdSplJ7eVjntU8kqeObVOJspLSHAHekGJBX29IJt7PUIr2Kja68i99Q/n+7yLta/iquSAA/5UXQVelGHy7BMpQ6PYKpnZwWXMJD2gSf0KVNSths29qQv2zhd0mJUtnOc/btaZJnCgtJiG31PtzRJ51NgaZwu0+0sxueWsBkJu8cl6qTipSXa2YNTk0NziXvWf1Uma02bsO1M08Oaf9ZqZDmXpdoUGkA+tx0uxEHjJfgu2YpxNGgD1nIZ5k2+ciJUsQeWXxrlQenqaDXNhy45afiHsh7JSRY+Izk5k/NfUEsDBBQAAAgIAACAn+tohh7ybQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSpXmqRWJicpKBsXlSopG5mW5qirmhuaV5komhqbmhUYqJUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+squB7nYgIAAAUFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+tohh7ybQAAAHgAAAAJACQAAAAAAAAAAAAAAK8CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAZwMAAAAA
+    dataString: UEsDBBQAAAgIAACAn+uchrE6ZQIAAAcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMziVjUxNDb61DSA/5mJBOLr4Ia401yJJHkgMkw3/vSpaxS0+It/tW7+2u/EW4NA0UVum15uxRMSA/JsSdybfJEHyAI90pueGf0Oe8c2Yrl0R9ziu1XCEeO5pRNVjNi59yJ1xyhGAreal0vWI7yJSxBuGSCgMY0so6tkToa0KO+DNdOsoJT7PUnT7xtIwmZzwWIC3oITVe3NzO0zhK5oER3cRRtEgW8yQOzI7YykLQugHmXAz8NA28JPZpEv2FDMcvlBDcBHHEnhpvPqONadEaJjBO0axXFN/MEKiA7yrrpI/pz2VpwIZeaHq64xq71tUlv1TXypqafafsg4rW3TSb33pVXdHH/+LTTnSpVf3Q34v2EbIVL/av9FRQY0e9HsN3I+m+QQcq9nQr4L0C+aTWWrWSYdDq1lFbA7O74e/FWlZBsR/wTuoV2DZDx/vR9oN1Hs7e/TETvN76GSYdsBHKd9zvA2iczW8U7LfFhBKIOhV/DLzR3XitQuCea2MxFFxKJ2+rWu1Sycr3zLlpbaa0BA8H0Q1IKuzpBcvY6xFexUbXXkXuqXtA4fIQ69/FFcXDQ34UXYVe1OEyLFOpwyOY6rm1gksYRLvAE/YpU1J2GzbuSU/btLqkxYi2azn7d7XIMoUFpcU2+p5u6Sy9nQJL43SZbpMYH9yMJcTvHpfok4qXTmhoD05NDsUl7ln/XZmsNW38tjNND2v+WatRy7ks1abQAPK5q3ARDhovwXfJVoxjgzZgLZd+3uQrJ0IVe2D5pVDuna6OVtN8qJKThn8o65CcZP5DkpMzOf8FUEsDBBQAAAgIAACAn+tohh7ybQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSpXmqRWJicpKBsXlSopG5mW5qirmhuaV5komhqbmhUYqJUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACAn+uchrE6ZQIAAAcFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACAn+tohh7ybQAAAHgAAAAJACQAAAAAAAAAAAAAALICAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAagMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -1382,7 +1382,7 @@ GameObject:
   - component: {fileID: 931299199}
   m_Layer: 0
   m_Name: stairs
-  m_TagString: fridge
+  m_TagString: stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1641,6 +1641,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1413888003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1413888004}
+  m_Layer: 0
+  m_Name: livingroompassivepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1413888004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413888003}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28.3, y: -10.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1436099728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1978,6 +2008,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624010994}
   m_CullTransparentMesh: 0
+--- !u!1 &1629623493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1629623494}
+  m_Layer: 0
+  m_Name: bathroompassivepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1629623494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629623493}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 54, y: -0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1647913538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647913539}
+  m_Layer: 0
+  m_Name: backyardpassivepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1647913539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647913538}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.3, y: 20.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1660403475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,6 +2294,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1882058348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1882058349}
+  m_Layer: 0
+  m_Name: kitchenpassivepoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1882058349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882058348}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.8, y: 5.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1894271549
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,12 +2379,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
+  idletimer: 0
   allpossible:
   - {fileID: 583999836}
   - {fileID: 931299198}
   colliders: []
+  allpassivepoints:
+  - {fileID: 1647913538}
+  - {fileID: 1882058348}
+  - {fileID: 1413888003}
+  - {fileID: 1629623493}
   idletime: 0
-  randtarget: 0
+  randhurttarget: 0
+  randpassivetarget: 0
   fridgedetected: 0
   stairsdetected: 0
   circuitbreakerdetected: 0
@@ -2272,8 +2399,10 @@ MonoBehaviour:
   bathtubdetected: 0
   tabledetected: 0
   stumpdetected: 0
+  anydetected: 0
   speed: 200
-  nextWaypointDistance: 0.1
+  nextWaypointDistance: 0.5
+  reachedEndOfPath: 0
 --- !u!61 &1894271552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2665,3 +2794,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 176bd605188b9cd41ae2679b52014779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  caninteract: 0
+  robot: {fileID: 1894271549}
