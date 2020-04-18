@@ -4,7 +4,31 @@ using UnityEngine;
 using Pathfinding; 
 public class robotAI : MonoBehaviour
 {
-    public Transform target;
+    public float timer;
+    //objects that can be targeted and can hurt the robot 
+    public static GameObject fridge;
+    public static GameObject stairs;
+    public static GameObject circuitbreaker;
+    public static GameObject pool;
+    public static GameObject bathtub;
+    public static GameObject table;
+    public static GameObject stump;
+    //end list of objects that can be targeted and hurt the robot 
+    public GameObject[] allpossible = new GameObject[7];
+    public Collider2D[] colliders; 
+    //(above) list of all targeted objects 
+    public int idletime;
+    public int randtarget;
+    //set these below to true in update if robot is in range of target 
+    public bool fridgedetected; //kitchen
+    public bool stairsdetected; //living room
+    public bool circuitbreakerdetected; //living room
+    public bool pooldetected; //backyard 
+    public bool bathtubdetected; //bathroom
+    public bool tabledetected; //kitchen
+    public bool stumpdetected; //backyard 
+
+    Transform target;
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
 
@@ -17,7 +41,12 @@ public class robotAI : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
+        idletime = Random.Range(0, 20);
+        randtarget = Random.Range(0, 2);
+        Debug.Log(allpossible[1].name);
+        Debug.Log("Targeting " + randtarget.ToString()); 
+        target = allpossible[randtarget].transform; 
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0f, .5f); 
@@ -62,6 +91,19 @@ public class robotAI : MonoBehaviour
 
         if (distance < nextWaypointDistance) {
             currentWaypoint++; 
+        }
+    }
+
+    private void Update()
+    {
+        colliders = Physics2D.OverlapCircleAll(this.transform.position, 5f);
+        for (int i = 0; i < colliders.Length; i++) {
+            if (colliders[i].gameObject.tag == "fridge") {
+                fridgedetected = true; 
+            }
+            else if (colliders[i].gameObject.tag == "stairs") {
+                stairsdetected = true; 
+            }
         }
     }
 }
