@@ -5,11 +5,15 @@ using UnityEngine;
 public class playercontroller : MonoBehaviour
 {
     // Start is called before the first frame update
+    Rigidbody2D myrb; 
     void Start()
     {
-        
+        myrb = GetComponent<Rigidbody2D>(); 
     }
-
+    private void Update()
+    {
+        myrb.velocity = Vector2.zero; 
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
