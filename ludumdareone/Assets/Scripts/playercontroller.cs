@@ -7,7 +7,8 @@ public class playercontroller : MonoBehaviour
     // Start is called before the first frame update
     Rigidbody2D myrb;
     public bool caninteract;
-    public GameObject robot; 
+    public GameObject robot;
+    public Animator animator;
     void Start()
     {
         myrb = GetComponent<Rigidbody2D>(); 
@@ -24,23 +25,31 @@ public class playercontroller : MonoBehaviour
             Vector3 position = this.transform.position;
             position.x -= (float)0.20;
             this.transform.position = position;
+            /*Animator sets bool to moving left to play animation*/
+            animator.SetBool("MovingLeft", true);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             Vector3 position = this.transform.position;
             position.x += (float)0.20;
             this.transform.position = position;
+            /*Animator sets bool to moving right to play animation*/
+            animator.SetBool("MovingRight", true);
         }
         else if (Input.GetKey(KeyCode.W))
         {
             Vector3 position = this.transform.position;
             position.y += (float)0.20;
             this.transform.position = position;
+            /*Animator sets bool to moving up to play animation*/
+            animator.SetBool("MovingUp", true);
         }
         else if (Input.GetKey(KeyCode.S)) {
             Vector3 position = this.transform.position;
             position.y -= (float)0.20;
-            this.transform.position = position; 
+            this.transform.position = position;
+            /*Animator sets bool to moving down to play animation*/
+            animator.SetBool("MovingDown", true);
         }
     }
 }
