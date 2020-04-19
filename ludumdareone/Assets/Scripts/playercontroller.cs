@@ -8,10 +8,11 @@ public class playercontroller : MonoBehaviour
     Rigidbody2D myrb;
     public bool caninteract;
     public GameObject robot;
-    public Animator animator;
+    Animator animator;
     void Start()
     {
-        myrb = GetComponent<Rigidbody2D>(); 
+        myrb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();         
     }
     private void Update()
     {
@@ -26,7 +27,8 @@ public class playercontroller : MonoBehaviour
             position.x -= (float)0.20;
             this.transform.position = position;
             /*Animator sets bool to moving left to play animation*/
-            animator.SetBool("MovingLeft", true);
+            //animator.SetBool("MovingLeft", true);
+            animator.Play("left");
         }
         else if (Input.GetKey(KeyCode.D))
         {
@@ -34,7 +36,8 @@ public class playercontroller : MonoBehaviour
             position.x += (float)0.20;
             this.transform.position = position;
             /*Animator sets bool to moving right to play animation*/
-            animator.SetBool("MovingRight", true);
+            // animator.SetBool("MovingRight", true);
+            animator.Play("right");
         }
         else if (Input.GetKey(KeyCode.W))
         {
@@ -42,14 +45,20 @@ public class playercontroller : MonoBehaviour
             position.y += (float)0.20;
             this.transform.position = position;
             /*Animator sets bool to moving up to play animation*/
-            animator.SetBool("MovingUp", true);
+            // animator.SetBool("MovingUp", true);
+            animator.Play("backward");
         }
-        else if (Input.GetKey(KeyCode.S)) {
+        else if (Input.GetKey(KeyCode.S))
+        {
             Vector3 position = this.transform.position;
             position.y -= (float)0.20;
             this.transform.position = position;
             /*Animator sets bool to moving down to play animation*/
-            animator.SetBool("MovingDown", true);
+            // animator.SetBool("MovingDown", true);
+            animator.Play("forward");
+        }
+        else {
+            animator.Play("idle"); 
         }
     }
 }

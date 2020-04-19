@@ -206,6 +206,9 @@ public class robotAI : MonoBehaviour
         {
             attempttimer += Time.deltaTime;
             timer = 0;
+            if (siren.activeSelf) {
+                siren.SetActive(false); 
+            }
         }
         if (anydetected) {
             timer += Time.deltaTime;

@@ -5602,7 +5602,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   caninteract: 0
   robot: {fileID: 1894271549}
-  animator: {fileID: 2130932112}
 --- !u!95 &2130932112
 Animator:
   serializedVersion: 3
@@ -5613,7 +5612,7 @@ Animator:
   m_GameObject: {fileID: 2130932106}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 187eb0a4ffd8cde4d94575a87f6305b1, type: 2}
+  m_Controller: {fileID: 9100000, guid: a233dfe0f5123744c8ca2c2de1759267, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
