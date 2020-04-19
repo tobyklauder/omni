@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class robotAI : MonoBehaviour
 {
     public float timer;
-    public float idletimer;
+    public float attempttimer; 
     public GameObject siren; 
     //objects that can be targeted and can hurt the robot 
     public static GameObject fridge;
@@ -58,7 +58,6 @@ public class robotAI : MonoBehaviour
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0f, .5f); 
-    
     }
 
     void UpdatePath() {
@@ -104,7 +103,8 @@ public class robotAI : MonoBehaviour
 
     private void Update()
     {
-        anydetecteduni = anydetected; 
+        anydetecteduni = anydetected;
+        attempttimer += Time.deltaTime; 
         colliders = Physics2D.OverlapCircleAll(this.transform.position, 1f);
         for (int i = 0; i < colliders.Length; i++) {
             if (colliders[i].gameObject.tag == "fridge")
@@ -145,6 +145,11 @@ public class robotAI : MonoBehaviour
         }
         if (timer >= 15) {
             SceneManager.LoadScene(2); 
+        }
+        if (attempttimer >= 30) {
+            randhurttarget = Random.Range(0, 7);
+            target = allpossible[randhurttarget].transform;
+            attempttimer = 0; 
         }
        // if (pursuepassive) {
          //   siren.SetActive(false); 

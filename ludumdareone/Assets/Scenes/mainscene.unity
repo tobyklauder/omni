@@ -5180,7 +5180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  idletimer: 0
+  attempttimer: 0
   siren: {fileID: 1401699128}
   allpossible:
   - {fileID: 583999836}
@@ -5189,6 +5189,7 @@ MonoBehaviour:
   - {fileID: 902629576}
   - {fileID: 1578697368}
   - {fileID: 305784559}
+  - {fileID: 1430314228}
   colliders: []
   allpassivepoints:
   - {fileID: 1647913538}
