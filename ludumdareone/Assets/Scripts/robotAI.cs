@@ -36,7 +36,9 @@ public class robotAI : MonoBehaviour
     public bool anydetected;
     public static bool anydetecteduni; 
     public static bool pursuepassive;
-    public static bool achievementview; 
+    public static bool achievementview;
+    public static bool sirenup;
+    public bool switchclipbool; 
     Transform target;
     float speed = 400f;
     public float nextWaypointDistance = 3f;
@@ -51,6 +53,7 @@ public class robotAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         fridge = GameObject.FindGameObjectWithTag("fridge");
         stairs = GameObject.FindGameObjectWithTag("stairs");
         circuitbraker = GameObject.FindGameObjectWithTag("circuitbraker");
@@ -58,6 +61,7 @@ public class robotAI : MonoBehaviour
         bathtub = GameObject.FindGameObjectWithTag("bathtub");
         table = GameObject.FindGameObjectWithTag("table");
         stump = GameObject.FindGameObjectWithTag("stump");
+        sirenup = false; 
         siren.SetActive(false); //warning siren image - not visible by default 
         randhurttarget = Random.Range(0, 7); //get target 
         // randpassivetarget = Random.Range(0, 4); 
@@ -207,6 +211,11 @@ public class robotAI : MonoBehaviour
         {
             anydetected = true;
             siren.SetActive(true);
+            sirenup = true;
+            if (!switchclipbool) {
+                musicmanager.switchclip("RobotCaught");
+                switchclipbool = true; 
+            }
         }
         else {
             anydetected = false; 
@@ -216,7 +225,13 @@ public class robotAI : MonoBehaviour
             attempttimer += Time.deltaTime;
             timer = 0;
             if (siren.activeSelf) {
-                siren.SetActive(false); 
+                siren.SetActive(false);
+                sirenup = false;
+                if (switchclipbool) {
+                    musicmanager.switchclip("RobotSearching");
+                    switchclipbool = false; 
+                }
+ 
             }
         }
         if (anydetected) {

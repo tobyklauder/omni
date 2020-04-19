@@ -1809,8 +1809,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 147780b583f311c4ab0110b0d5e3a507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 8300000, guid: c7e411c7f1e459e46a409068e14d6e87, type: 3}
-  audioSource: {fileID: 519420034}
+  intense: {fileID: 8300000, guid: 169a0d9988665de4c9208423123a2d09, type: 3}
+  search: {fileID: 8300000, guid: c7e411c7f1e459e46a409068e14d6e87, type: 3}
 --- !u!82 &519420034
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1825,7 +1825,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -32242,6 +32242,7 @@ MonoBehaviour:
   tabledetected: 0
   stumpdetected: 0
   anydetected: 0
+  switchclipbool: 0
   nextWaypointDistance: 0.5
   reachedEndOfPath: 0
 --- !u!61 &1894271552
