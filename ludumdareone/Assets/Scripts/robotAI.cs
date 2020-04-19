@@ -35,7 +35,8 @@ public class robotAI : MonoBehaviour
     public bool stumpdetected; //backyard 
     public bool anydetected;
     public static bool anydetecteduni; 
-    public static bool pursuepassive; 
+    public static bool pursuepassive;
+    public static bool achievementview; 
     Transform target;
     float speed = 400f;
     public float nextWaypointDistance = 3f;
@@ -86,27 +87,34 @@ public class robotAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (path == null) {
-            return; 
-        }
-        if (currentWaypoint >= path.vectorPath.Count)
+        if (achievementview)
         {
-            reachedEndOfPath = true;
-            return;
-        }
-        else {
-            reachedEndOfPath = false; 
-        }
 
-        Vector2 direction = ((Vector2) path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
+            if (path == null)
+            {
+                return;
+            }
+            if (currentWaypoint >= path.vectorPath.Count)
+            {
+                reachedEndOfPath = true;
+                return;
+            }
+            else
+            {
+                reachedEndOfPath = false;
+            }
 
-        rb.AddForce(force); 
+            Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+            Vector2 force = direction * speed * Time.deltaTime;
 
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+            rb.AddForce(force);
 
-        if (distance < nextWaypointDistance) {
-            currentWaypoint++; 
+            float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
+            if (distance < nextWaypointDistance)
+            {
+                currentWaypoint++;
+            }
         }
     }
 

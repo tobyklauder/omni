@@ -5,17 +5,36 @@ using UnityEngine;
 public class playercontroller : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject achievements;
+    public static bool achivement; 
     Rigidbody2D myrb;
     public bool caninteract;
     public GameObject robot;
     Animator animator;
+
     void Start()
     {
+        achievements.SetActive(false);
+        robotAI.achievementview = true;
+        achivement = false;
         myrb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();         
     }
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            if (achievements.activeSelf)
+            {
+                robotAI.achievementview = true;
+                achivement = false; 
+                achievements.SetActive(false);
+            }
+            else {
+                achievements.SetActive(true);
+                robotAI.achievementview = false;
+                achivement = true; 
+            }
+        }
         myrb.velocity = Vector2.zero; 
     }
     // Update is called once per frame

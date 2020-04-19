@@ -11,6 +11,7 @@ TagManager:
   - table
   - pool
   - stump
+  - drag
   layers:
   - Default
   - TransparentFX
