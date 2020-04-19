@@ -5,6 +5,7 @@ using Pathfinding;
 using UnityEngine.SceneManagement;
 public class robotAI : MonoBehaviour
 {
+    public int targetrange = 5; 
     public float timer;
     public float attempttimer; 
     public GameObject siren; 
@@ -145,49 +146,49 @@ public class robotAI : MonoBehaviour
             }
         } */
 
-        if (Vector3.Distance(this.transform.position, fridge.transform.position) < 5)
+        if (Vector3.Distance(this.transform.position, fridge.transform.position) < targetrange)
         {
             fridgedetected = true;
         }
         else {
             fridgedetected = false;
         }
-        if (Vector3.Distance(this.transform.position, stairs.transform.position) < 5)
+        if (Vector3.Distance(this.transform.position, stairs.transform.position) < targetrange)
         {
             stairsdetected = true;
         }
         else {
             stairsdetected = false;
         }
-        if (Vector3.Distance(this.transform.position, bathtub.transform.position) < 5)
+        if (Vector3.Distance(this.transform.position, bathtub.transform.position) < targetrange)
         {
             bathtubdetected = true;
         }
         else {
             bathtubdetected = false; 
         }
-        if (Vector3.Distance(this.transform.position, circuitbraker.transform.position) < 5)
+        if (Vector3.Distance(this.transform.position, circuitbraker.transform.position) < targetrange)
         {
             circuitbrakerdetected = true;
         }
         else {
             circuitbrakerdetected = false; 
         }
-        if (Vector3.Distance(this.transform.position, table.transform.position) < 5)
+        if (Vector3.Distance(this.transform.position, table.transform.position) < targetrange)
         {
             tabledetected = true;
         }
         else {
             tabledetected = false; 
         }
-        if (Vector3.Distance(this.transform.position, pool.transform.position) < 5)
+        if (Vector3.Distance(this.transform.position, pool.transform.position) < targetrange)
         {
             pooldetected = true;
         }
         else {
             pooldetected = false; 
         }
-        if (Vector3.Distance(this.transform.position, stump.transform.position) < 5)
+        if (Vector3.Distance(this.transform.position, stump.transform.position) < targetrange)
         {
             stumpdetected = true;
         }

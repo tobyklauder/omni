@@ -5179,6 +5179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8411547255a2b444282ebf419c917070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetrange: 2
   timer: 0
   attempttimer: 0
   siren: {fileID: 1401699128}
