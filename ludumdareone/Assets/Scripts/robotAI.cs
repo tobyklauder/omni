@@ -49,11 +49,19 @@ public class robotAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        siren.SetActive(false); 
-        idletime = Random.Range(0, 20);
-        randhurttarget = Random.Range(0, 7);
-        randpassivetarget = Random.Range(0, 4); 
-        Debug.Log("Targeting " + randhurttarget.ToString()); 
+        fridge = GameObject.FindGameObjectWithTag("fridge");
+        stairs = GameObject.FindGameObjectWithTag("stairs");
+        circuitbraker = GameObject.FindGameObjectWithTag("circuitbraker");
+        pool = GameObject.FindGameObjectWithTag("pool");
+        bathtub = GameObject.FindGameObjectWithTag("bathtub");
+        table = GameObject.FindGameObjectWithTag("table");
+        stump = GameObject.FindGameObjectWithTag("stump");
+        siren.SetActive(false); //warning siren image - not visible by default 
+        randhurttarget = Random.Range(0, 7); //get target 
+        // randpassivetarget = Random.Range(0, 4); 
+        //Debug.Log("Targeting " + randhurttarget.ToString()); 
+
+        //pathfinding stuff 
         target = allpossible[randhurttarget].transform; 
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
@@ -104,8 +112,8 @@ public class robotAI : MonoBehaviour
     private void Update()
     {
         anydetecteduni = anydetected;
-        attempttimer += Time.deltaTime; 
-        colliders = Physics2D.OverlapCircleAll(this.transform.position, 1f);
+      
+        /*colliders = Physics2D.OverlapCircleAll(this.transform.position, 1f);
         for (int i = 0; i < colliders.Length; i++) {
             if (colliders[i].gameObject.tag == "fridge")
             {
@@ -135,13 +143,73 @@ public class robotAI : MonoBehaviour
             {
                 stumpdetected = true; 
             }
+        } */
+
+        if (Vector3.Distance(this.transform.position, fridge.transform.position) < 5)
+        {
+            fridgedetected = true;
         }
-        if (stairsdetected || fridgedetected || bathtubdetected || circuitbrakerdetected || tabledetected || pooldetected || stumpdetected) {
+        else {
+            fridgedetected = false;
+        }
+        if (Vector3.Distance(this.transform.position, stairs.transform.position) < 5)
+        {
+            stairsdetected = true;
+        }
+        else {
+            stairsdetected = false;
+        }
+        if (Vector3.Distance(this.transform.position, bathtub.transform.position) < 5)
+        {
+            bathtubdetected = true;
+        }
+        else {
+            bathtubdetected = false; 
+        }
+        if (Vector3.Distance(this.transform.position, circuitbraker.transform.position) < 5)
+        {
+            circuitbrakerdetected = true;
+        }
+        else {
+            circuitbrakerdetected = false; 
+        }
+        if (Vector3.Distance(this.transform.position, table.transform.position) < 5)
+        {
+            tabledetected = true;
+        }
+        else {
+            tabledetected = false; 
+        }
+        if (Vector3.Distance(this.transform.position, pool.transform.position) < 5)
+        {
+            pooldetected = true;
+        }
+        else {
+            pooldetected = false; 
+        }
+        if (Vector3.Distance(this.transform.position, stump.transform.position) < 5)
+        {
+            stumpdetected = true;
+        }
+        else {
+            stumpdetected = false; 
+        }
+        if (stairsdetected || fridgedetected || bathtubdetected || circuitbrakerdetected || tabledetected || pooldetected || stumpdetected)
+        {
             anydetected = true;
-            siren.SetActive(true); 
+            siren.SetActive(true);
+        }
+        else {
+            anydetected = false; 
+        }
+        if (!anydetected)
+        {
+            attempttimer += Time.deltaTime;
+            timer = 0;
         }
         if (anydetected) {
-            timer += Time.deltaTime; 
+            timer += Time.deltaTime;
+            attempttimer = 0; 
         }
         if (timer >= 15) {
             SceneManager.LoadScene(2); 

@@ -3378,7 +3378,7 @@ GameObject:
   - component: {fileID: 1430314229}
   m_Layer: 0
   m_Name: stump
-  m_TagString: pool
+  m_TagString: stump
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
