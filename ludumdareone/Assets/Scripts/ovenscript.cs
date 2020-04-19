@@ -15,7 +15,7 @@ public class ovenscript : MonoBehaviour
     private void Update()
     {
         Vector3 pos = Camera.main.WorldToScreenPoint(this.transform.position);
-        pos.x = pos.x - 33;
+        pos.x = pos.x - 45;
         pos.y = pos.y - 20; 
         fridgetext.transform.position = pos; 
     }

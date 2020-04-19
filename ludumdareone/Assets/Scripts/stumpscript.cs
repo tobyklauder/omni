@@ -2,31 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stairsscript : MonoBehaviour
+public class stumpscript : MonoBehaviour
 {
-
-    public GameObject stairpanel; 
+    public GameObject stumppanel;
     // Start is called before the first frame update
     void Start()
     {
-        stairpanel.SetActive(false); 
+        stumppanel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 pos = Camera.main.WorldToScreenPoint(this.transform.position);
-        pos.x = pos.x - 50; 
-        stairpanel.transform.position = pos; 
+        pos.x = pos.x - 48;
+        stumppanel.transform.position = pos;
     }
 
     private void OnMouseOver()
     {
-        stairpanel.SetActive(true); 
+        stumppanel.SetActive(true);
     }
 
     private void OnMouseExit()
     {
-        stairpanel.SetActive(false); 
+        stumppanel.SetActive(false);
     }
 }

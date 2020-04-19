@@ -2,31 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stairsscript : MonoBehaviour
+public class circuitbrakerscript : MonoBehaviour
 {
-
-    public GameObject stairpanel; 
+    public GameObject circuitpanel;
     // Start is called before the first frame update
     void Start()
     {
-        stairpanel.SetActive(false); 
+        circuitpanel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 pos = Camera.main.WorldToScreenPoint(this.transform.position);
-        pos.x = pos.x - 50; 
-        stairpanel.transform.position = pos; 
+        pos.x = pos.x - 48;
+        circuitpanel.transform.position = pos;
     }
 
     private void OnMouseOver()
     {
-        stairpanel.SetActive(true); 
+        circuitpanel.SetActive(true);
     }
 
     private void OnMouseExit()
     {
-        stairpanel.SetActive(false); 
+        circuitpanel.SetActive(false);
     }
 }

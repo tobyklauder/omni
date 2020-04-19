@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stairsscript : MonoBehaviour
+public class bathtubscript : MonoBehaviour
 {
 
-    public GameObject stairpanel; 
+    public GameObject bathtubpanel;
     // Start is called before the first frame update
     void Start()
     {
-        stairpanel.SetActive(false); 
+        bathtubpanel.SetActive(false); 
     }
 
     // Update is called once per frame
@@ -17,16 +17,16 @@ public class stairsscript : MonoBehaviour
     {
         Vector3 pos = Camera.main.WorldToScreenPoint(this.transform.position);
         pos.x = pos.x - 50; 
-        stairpanel.transform.position = pos; 
+        bathtubpanel.transform.position = pos; 
     }
 
     private void OnMouseOver()
     {
-        stairpanel.SetActive(true); 
+        bathtubpanel.SetActive(true); 
     }
 
     private void OnMouseExit()
     {
-        stairpanel.SetActive(false); 
+        bathtubpanel.SetActive(false); 
     }
 }

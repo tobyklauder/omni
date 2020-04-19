@@ -6,6 +6,11 @@ TagManager:
   tags:
   - fridge
   - stairs
+  - bathtub
+  - circuitbraker
+  - table
+  - pool
+  - stump
   layers:
   - Default
   - TransparentFX

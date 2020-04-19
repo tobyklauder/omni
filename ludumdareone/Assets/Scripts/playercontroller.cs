@@ -14,15 +14,6 @@ public class playercontroller : MonoBehaviour
     }
     private void Update()
     {
-        if (Vector3.Distance(this.transform.position, robot.transform.position) < 5 && robotAI.anydetecteduni) {
-            caninteract = true; 
-        }
-        if (caninteract) {
-            if (Input.GetKeyDown(KeyCode.Q)) {
-                Debug.Log("Interact Successful"); 
-                robotAI.pursuepassive = true; 
-            }
-        }
         myrb.velocity = Vector2.zero; 
     }
     // Update is called once per frame
@@ -31,24 +22,24 @@ public class playercontroller : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             Vector3 position = this.transform.position;
-            position.x -= (float)0.30;
+            position.x -= (float)0.20;
             this.transform.position = position;
         }
         else if (Input.GetKey(KeyCode.D))
         {
             Vector3 position = this.transform.position;
-            position.x += (float)0.30;
+            position.x += (float)0.20;
             this.transform.position = position;
         }
         else if (Input.GetKey(KeyCode.W))
         {
             Vector3 position = this.transform.position;
-            position.y += (float)0.30;
+            position.y += (float)0.20;
             this.transform.position = position;
         }
         else if (Input.GetKey(KeyCode.S)) {
             Vector3 position = this.transform.position;
-            position.y -= (float)0.30;
+            position.y -= (float)0.20;
             this.transform.position = position; 
         }
     }
