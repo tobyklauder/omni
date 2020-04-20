@@ -68,7 +68,7 @@ public class robotAI : MonoBehaviour
         //Debug.Log("Targeting " + randhurttarget.ToString()); 
 
         //pathfinding stuff 
-        target = allpossible[1].transform; 
+        target = allpossible[randhurttarget].transform; 
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0f, .5f); 
