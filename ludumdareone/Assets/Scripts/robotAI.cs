@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI; 
 public class robotAI : MonoBehaviour
 {
-    public int targetrange = 5; 
+    public Text text; 
+    public int targetrange = 5;
+    public float wintimer = 120f; 
     public float timer;
     public float attempttimer; 
     public GameObject siren; 
@@ -66,9 +69,9 @@ public class robotAI : MonoBehaviour
         sirenup = false; 
         siren.SetActive(false); //warning siren image - not visible by default 
         randhurttarget = Random.Range(0, 7); //get target 
-        // randpassivetarget = Random.Range(0, 4); 
+        randpassivetarget = Random.Range(0, 4);
         //Debug.Log("Targeting " + randhurttarget.ToString()); 
-
+        this.transform.position = allpassivepoints[randpassivetarget].transform.position; 
         //pathfinding stuff 
         target = allpossible[randhurttarget].transform; 
         seeker = GetComponent<Seeker>();
@@ -127,6 +130,8 @@ public class robotAI : MonoBehaviour
 
     void Update()
     {
+        wintimer -= Time.deltaTime;
+        text.text = "Victory in: \n" + ((int)wintimer).ToString() + " seconds"; 
         anydetecteduni = anydetected;
       
         /*colliders = Physics2D.OverlapCircleAll(this.transform.position, 1f);
@@ -244,10 +249,13 @@ public class robotAI : MonoBehaviour
         if (timer >= 15) {
             SceneManager.LoadScene(2); 
         }
-        if (attempttimer >= 30) {
+        if (attempttimer >= 20) {
             randhurttarget = Random.Range(0, 7);
             target = allpossible[randhurttarget].transform;
             attempttimer = 0; 
+        }
+        if (wintimer < 0) {
+            SceneManager.LoadScene(3); 
         }
        // if (pursuepassive) {
          //   siren.SetActive(false); 
