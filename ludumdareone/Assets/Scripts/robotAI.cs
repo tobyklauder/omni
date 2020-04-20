@@ -68,7 +68,7 @@ public class robotAI : MonoBehaviour
         //Debug.Log("Targeting " + randhurttarget.ToString()); 
 
         //pathfinding stuff 
-        target = allpossible[randhurttarget].transform; 
+        target = allpossible[1].transform; 
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
         InvokeRepeating("UpdatePath", 0f, .5f); 
@@ -193,7 +193,7 @@ public class robotAI : MonoBehaviour
         else {
             tabledetected = false; 
         }
-        if (Vector3.Distance(this.transform.position, pool.transform.position) < targetrange)
+        if (Vector3.Distance(this.transform.position, pool.transform.position) < 7)
         {
             pooldetected = true;
         }
