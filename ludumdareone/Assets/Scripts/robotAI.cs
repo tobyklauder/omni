@@ -48,12 +48,14 @@ public class robotAI : MonoBehaviour
     public bool reachedEndOfPath = false;
 
     Seeker seeker;
-    Rigidbody2D rb; 
+    Rigidbody2D rb;
+
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = GetComponent<Animator>();
         fridge = GameObject.FindGameObjectWithTag("fridge");
         stairs = GameObject.FindGameObjectWithTag("stairs");
         circuitbraker = GameObject.FindGameObjectWithTag("circuitbraker");
@@ -120,9 +122,10 @@ public class robotAI : MonoBehaviour
                 currentWaypoint++;
             }
         }
+        animator.Play("LudumRobot");
     }
 
-    private void Update()
+    void Update()
     {
         anydetecteduni = anydetected;
       
