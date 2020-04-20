@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class tutorialtextcontroller : MonoBehaviour
 {
     public GameObject siren;
-    public GameObject closebutton;
     public Text text;
     public static int current;
     public string first;
@@ -17,7 +16,6 @@ public class tutorialtextcontroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        closebutton.SetActive(false); 
         siren.SetActive(false); 
         first = "Omni Bot Wants to be a human,\n Sadly, pretty hard for a robot \n to be a human, so we need to stop omni - bot from doing \n human things that could hurt \n it. drinking water for example";
         text.text = first;
@@ -52,7 +50,9 @@ public class tutorialtextcontroller : MonoBehaviour
         if (current == 6) {
             sixth = "Some items will tell you what they are over-top. Those are targets for the robot, or achievements. There are some super secret unmarked achievements as well.";
             text.text = sixth;
-            closebutton.SetActive(true);
+        }
+        if (current == 7) {
+            current = 1; 
         }
     }
 
