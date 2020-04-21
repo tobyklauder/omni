@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI; 
 public class robotAI : MonoBehaviour
 {
-    public Text text; 
     public int targetrange = 5;
     public float wintimer = 120f; 
     public float timer;
@@ -131,7 +130,6 @@ public class robotAI : MonoBehaviour
     void Update()
     {
         wintimer -= Time.deltaTime;
-        text.text = "Victory in: \n" + ((int)wintimer).ToString() + " seconds"; 
         anydetecteduni = anydetected;
       
         /*colliders = Physics2D.OverlapCircleAll(this.transform.position, 1f);
